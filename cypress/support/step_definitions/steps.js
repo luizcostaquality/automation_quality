@@ -1,5 +1,5 @@
 import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
-import Login from '../pages/Signup'
+import Signup from '../pages/Signup'
 
 Given("I access google page", () => {
     cy.visit("https://www.google.com.br/");
@@ -10,21 +10,21 @@ When("I search for Grupo Quality", () => {
 })
 
 Given("I access homepage", () => {
-    Login.accessPage()
+    Signup.accessPage()
 })
 
 When("I access the login option", () => {
-    Login.clickLoginBtn()
+    Signup.clickLoginBtn()
 })
 
 And("I insert data incorrects", () => {
-    Login.insertEmail()
-    Login.insertPassword()
+    Signup.insertEmail()
+    Signup.insertPassword()
 })
 
 And("I click the login button", () => {
     cy.get('[data-qa="login-button"]').click()
-  
+
 })
 
 Then("a error message is displayed", () => {
@@ -32,11 +32,19 @@ Then("a error message is displayed", () => {
       .should('have.text','Your email or password is incorrect!')
 })
 
-And("I insert data on the inputs fields", () => {
-    Login.insertEmail()
-    Login.insertPassword()
+Given("I access page", () => {
+    Signup.accessSignupPage()
 })
 
-Then("They are inserted correctly", () => {
-    cy.wait(500)
+When("I fill the inputs from signup option", () => {
+    Signup.nameInput()
+    Signup.emailInput()
+})
+
+And("I click on Signup button", () =>{
+    Signup.clickSignupBtn()
+})
+
+Then("I am redirect to form page",() => {
+    Signup.formPage()
 })

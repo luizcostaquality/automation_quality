@@ -1,7 +1,7 @@
 Feature: Signup
 
  Scenario: Fill the inputs email and password
-        Given I access homepage
-        When I access the login option
-            And I insert data on the inputs fields
-        Then They are inserted correctly
+        Given I access page
+        When I fill the inputs from signup option
+            And I click on Signup button
+        Then I am redirect to form page
