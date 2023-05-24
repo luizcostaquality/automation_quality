@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+import dataSignup from "../../../fixtures/dataSignup.json"
 
 const elLogin = require('./elements').ELEMENTS
 
@@ -24,11 +25,11 @@ class Signup {
     }
 
     nameInput(){
-        cy.get(elLogin.insertNameInput).type(elLogin.name)
+        cy.get(elLogin.insertNameInput).type(dataSignup.name)
     }
 
     emailInput(){
-        cy.get(elLogin.insertEmail).type(elLogin.email)
+        cy.get(elLogin.insertEmail).type(dataSignup.email)
     }
 
     clickSignupBtn(){
@@ -38,19 +39,19 @@ class Signup {
     formPage(){
         cy.get(elLogin.redirectPage).click()
         cy.get(elLogin.gender).click()
-        cy.get(elLogin.passwordCreate).type(elLogin.password)
+        cy.get(elLogin.passwordCreate).type(dataSignup.password)
         cy.get(elLogin.birthDay).select('10')
         cy.get(elLogin.birthMonth).select('4')
         cy.get(elLogin.birthYear).select('2014')
-        cy.get(elLogin.insertFirstName).type(elLogin.name)
-        cy.get(elLogin.insertLastName).type(elLogin.lastName)
-        cy.get(elLogin.companyID).type(elLogin.company)
-        cy.get(elLogin.addressID).type(elLogin.address)
+        cy.get(elLogin.insertFirstName).type(dataSignup.name)
+        cy.get(elLogin.insertLastName).type(dataSignup.lastName)
+        cy.get(elLogin.companyID).type(dataSignup.company)
+        cy.get(elLogin.addressID).type(dataSignup.address)
         cy.get(elLogin.chooseCountry).select('Israel')
-        cy.get(elLogin.insertState).type(elLogin.state)
-        cy.get(elLogin.insertCity).type(elLogin.state)
-        cy.get(elLogin.insertZipCode).type(elLogin.code)
-        cy.get(elLogin.insertPhoneNumber).type(elLogin.phone)
+        cy.get(elLogin.insertState).type(dataSignup.state)
+        cy.get(elLogin.insertCity).type(dataSignup.state)
+        cy.get(elLogin.insertZipCode).type(dataSignup.code)
+        cy.get(elLogin.insertPhoneNumber).type(dataSignup.phone)
     }
 }
 export default new Signup()

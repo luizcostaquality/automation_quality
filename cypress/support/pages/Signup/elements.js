@@ -19,15 +19,6 @@ export const ELEMENTS = {
     insertCity: '[data-qa="city"]',
     insertZipCode: '[data-qa="zipcode"]',
     insertPhoneNumber: '[data-qa="mobile_number"]',
-    name: 'Luiz',
-    email: 'luiz@teste.com',
     gender: '#id_gender1',
-    password: '1234554321',
-    lastName: 'Costa',
-    company: 'Teste Automação',
-    address: 'Avenida Santo Amaro, 123 - Santo Amaro',
-    state: 'TelAviv',
-    city: 'TelAviv',
-    code: '05346-000',
-    phone: '2 234-099-000'
+
 }
