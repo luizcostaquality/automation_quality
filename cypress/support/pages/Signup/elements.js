@@ -21,4 +21,11 @@ export const ELEMENTS = {
     insertPhoneNumber: '[data-qa="mobile_number"]',
     gender: '#id_gender1',
 
+    productImage: '[src="/get_product_picture/1"]',
+    productQuantity: '#quantity',
+    buttonAdd: ".btn.btn-default.cart",
+    nameField: '[placeholder="Your Name"]',
+    emailField: '#email',
+    reviewField: '[placeholder="Add Review Here!"]'
+
 }

@@ -48,3 +48,18 @@ And("I click on Signup button", () =>{
 Then("I am redirect to form page",() => {
     Signup.formPage()
 })
+
+Given("I access PDP page", () => {
+    Signup.pdpPage()
+})
+
+When("I inspection the elements", () => {
+    //cy.get('[src="/get_product_picture/1"]'),//exemplo atributo HTML
+    //cy.get("#quantity"),// exemplo id
+    //cy.get(".btn.btn-default.cart"), // exemplo classe
+    //cy.get('[placeholder="Your Name"]'), //exemplo atributo HTML
+    //cy.get("#email"), // exemplo id
+    //cy.get('[placeholder="Add Review Here!"]') //exemplo atributo HTML
+    Signup.elementsInspection()
+
+})

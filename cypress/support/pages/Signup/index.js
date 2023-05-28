@@ -53,5 +53,19 @@ class Signup {
         cy.get(elLogin.insertZipCode).type(dataSignup.code)
         cy.get(elLogin.insertPhoneNumber).type(dataSignup.phone)
     }
+
+    pdpPage(){
+        cy.visit("https://automationexercise.com/product_details/1")
+    }
+
+    elementsInspection(){
+        cy.get(elLogin.productImage)
+        cy.get(elLogin.productQuantity)
+        cy.get(elLogin.buttonAdd)
+        cy.get(elLogin.nameField)
+        cy.get(elLogin.emailField)
+        cy.get(elLogin.reviewField)
+    }
+
 }
 export default new Signup()
