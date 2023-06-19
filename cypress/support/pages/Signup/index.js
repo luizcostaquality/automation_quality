@@ -47,10 +47,29 @@ class Signup {
         cy.get(elLogin.insertLastName).type(dataSignup.lastName)
         cy.get(elLogin.companyID).type(dataSignup.company)
         cy.get(elLogin.addressID).type(dataSignup.address)
-        cy.get(elLogin.chooseCountry).select('Israel')
-        cy.get(elLogin.insertState).type(dataSignup.state)
-        cy.get(elLogin.insertCity).type(dataSignup.state)
-        cy.get(elLogin.insertZipCode).type(dataSignup.code)
+        //cy.get(elLogin.chooseCountry).select('Israel')
+        //cy.get(elLogin.insertState).type(dataSignup.state)
+        //cy.get(elLogin.insertCity).type(dataSignup.state)
+        //cy.get(elLogin.insertZipCode).type(dataSignup.code)
+        if (Cypress.env('country') === "Singapore"){
+            cy.get(elLogin.chooseCountry).select('Singapore')
+            cy.get(elLogin.insertState).type('Singapore')
+            cy.get(elLogin.insertCity).type('Singapore')
+            cy.get(elLogin.insertZipCode).type('8787')
+        }
+        if (Cypress.env('country') === "Canada"){
+            cy.get(elLogin.chooseCountry).select('Canada')
+            cy.get(elLogin.insertState).type('Canada')
+            cy.get(elLogin.insertCity).type('Toronto')
+            cy.get(elLogin.insertZipCode).type('1234')
+        }
+        if (Cypress.env('country') === "Australia"){
+            cy.get(elLogin.chooseCountry).select('Australia')
+            cy.get(elLogin.insertState).type('Nova Gales do Sul')
+            cy.get(elLogin.insertCity).type('Sydney')
+            cy.get(elLogin.insertZipCode).type('2112')
+        }
+
         cy.get(elLogin.insertPhoneNumber).type(dataSignup.phone)
     }
 
@@ -65,7 +84,7 @@ class Signup {
         cy.get(elLogin.nameField)
         cy.get(elLogin.emailField)
         cy.get(elLogin.reviewField)
-    }
 
+    }
 }
 export default new Signup()

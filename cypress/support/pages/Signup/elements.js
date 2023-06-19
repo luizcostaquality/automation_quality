@@ -26,6 +26,6 @@ export const ELEMENTS = {
     buttonAdd: ".btn.btn-default.cart",
     nameField: '[placeholder="Your Name"]',
     emailField: '#email',
-    reviewField: '[placeholder="Add Review Here!"]'
+    reviewField: '[placeholder="Add Review Here!"]',
 
 }
