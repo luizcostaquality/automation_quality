@@ -14,7 +14,7 @@ class CrossPage{
   }
 
   cickBtnLoginandPassword(){
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(elHeader.btnLoginPassword).click();
   }
 
